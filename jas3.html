@@ -1,0 +1,333 @@
+<html>
+  <head>
+    <title>Salads - Healthy Food Website Template</title>
+    <link rel="stylesheet" href="https://cloudflare.com" />
+    <link href="https://googleapis.com" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Source Sans Pro", sans-serif;
+        color: black;
+        line-height: 1.6;
+        background-color: #fff;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Montserrat", sans-serif;
+        color: #ad6060;
+        font-weight: 700;
+      }
+      a {
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      ul {
+        list-style: none;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .btn-primary {
+        background-color: green;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-weight: 600;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      .btn-primary:hover {
+        background-color: #e09e00;
+      }
+
+      header {
+        background-color: aqua;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 20px 0;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 28px;
+        color: #fff;
+        font-weight: 700;
+      }
+      .logo span {
+        color: #ffb400;
+      }
+      .nav-links {
+        display: flex;
+        gap: 30px;
+      }
+      .nav-links a {
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #ffb400;
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://unsplash.com") no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        color: #fff;
+      }
+      .hero-content {
+        max-width: 600px;
+      }
+      .hero-content h1 {
+        font-size: 52px;
+        color: #fff;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      .hero-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #e0e0e0;
+      }
+
+      .features {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .feature-card {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: 0.3s;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+      .feature-card i {
+        font-size: 40px;
+        color: #ffb400;
+        margin-bottom: 20px;
+      }
+      .feature-card h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      .menu-section {
+        padding: 80px 0;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .section-title h2 {
+        font-size: 36px;
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+      }
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: #ffb400;
+      }
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+      .menu-item {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+      }
+      .menu-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .menu-info {
+        padding: 20px;
+      }
+      .menu-info h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .menu-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+      }
+      .price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffb400;
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background-color: #1a1a1a;
+        color: #a0a0a0;
+        padding: 40px 0;
+        text-align: center;
+      }
+      footer p {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .hero-content h1 {
+          font-size: 38px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <a href="#" class="logo">Salads<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Healthy & Delicious Salads For You</h1>
+          <p>
+            Experience the finest selection of organic greens, house-made
+            dressings, and fresh ingredients prepared daily by our expert chefs.
+          </p>
+          <a href="#" class="btn-primary">View Our Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container grid-3">
+        <div class="feature-card">
+          <i class="fas fa-leaf"></i>
+          <h3>100% Organic</h3>
+          <p>
+            We source all our vegetables daily from certified local organic
+            farms.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Fresh Ingredients</h3>
+          <p>
+            Every meal is prepared fresh to order with absolutely zero
+            preservatives.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Fast Delivery</h3>
+          <p>
+            Get your favorite healthy meals delivered straight to your door in
+            under 30 minutes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Popular Dishes</h2>
+          <p>Choose from our hand-picked healthy favorites</p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="https://unsplash.com" alt="Salad" class="menu-img" />
+            <div class="menu-info">
+              <h3>Mediterranean Salad</h3>
+              <p>
+                Olives, feta cheese, cucumbers, and tomatoes with olive oil.
+              </p>
+              <div class="menu-footer">
+                <span class="price">$12.99</span>
+                <a
+                  href="#"
+                  class="btn-primary"
+                  style="padding: 6px 15px; font-size: 12px"
+                  >Order</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="https://unsplash.com" alt="Salad" class="menu-img" />
+            <div class="menu-info">
+              <h3>Quinoa Power Bowl</h3>
+              <p>Quinoa, avocado, roasted sweet potatoes, and fresh spinach.</p>
+              <div class="menu-footer">
+                <span class="price">$14.50</span>
+                <a
+                  href="#"
+                  class="btn-primary"
+                  style="padding: 6px 15px; font-size: 12px"
+                  >Order</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <img src="https://unsplash.com" alt="Salad" class="menu-img" />
+            <div class="menu-info"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

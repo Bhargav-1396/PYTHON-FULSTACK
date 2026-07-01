@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 500px;
+        height: 300px;
+        background-color: rgb(255, 8, 0);
+        display: grid;
+        padding: 3px;
+        border: 10px solid rgb(0, 217, 255);
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+      }
+      .parent > div {
+        background-color: aqua;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+      }
+      .parent > .child1 {
+        grid-row: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+    </div>
+  </body>
+</html>

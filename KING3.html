@@ -1,0 +1,200 @@
+<html>
+  <head>
+    <title>Semantic</title>
+    <style>
+      body {
+        position: relative;
+      }
+      header,
+      #s1,
+      #s2,
+      aside,
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      header {
+        background-color: burlywood;
+        color: black;
+        font-weight: bolder;
+        font-size: 50px;
+        height: 200px;
+        margin: 10px;
+      }
+      nav {
+        height: 100px;
+        margin: 10px;
+        background-color: white;
+        position: sticky;
+        top: 0px;
+        border-radius: 0px 0px 30px 30px;
+        box-shadow: 5px 5px 5px rgba(193, 188, 188, 0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        margin-left: 100px;
+      }
+      .quicklinks {
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .quicklinks > li {
+        list-style-type: none;
+      }
+      #s2 {
+        grid-column: span 2;
+      }
+      #s1,
+      #s2,
+      article,
+      aside {
+        background-color: white;
+        border-radius: 40px;
+        border: 5px solid rgb(201, 196, 196);
+        box-shadow: 5px 5px 5px rgba(184, 176, 176, 0.5);
+      }
+      aside {
+        grid-row: span 2;
+      }
+      article {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      main {
+        height: 1600px;
+        display: grid;
+        margin: 50px 10px;
+        grid-template-columns: 2.3fr 0.7fr;
+        gap: 20px;
+      }
+
+      footer {
+        background-color: grey;
+        height: 200px;
+      }
+      #s1 {
+        display: flex;
+        padding: 20px 50px;
+        gap: 30px;
+      }
+      #s1 > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+      }
+      #s1 > p {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+      }
+      .card1 {
+        border: 5px solid white;
+        width: 300px;
+        height: 550px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 5px 5px 5px rgba(95, 92, 92, 0.5);
+      }
+      .card1 > p {
+        text-align: justify;
+        margin: 20px;
+      }
+
+      .card1 > button {
+        border: none;
+        border-radius: 10px;
+        background-color: bisque;
+        color: black;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .card1 > img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Welcome User😁</h1></header>
+    <nav>
+      <h1 class="logo">Navigation Bar</h1>
+      <ol class="quicklinks">
+        <li>Home</li>
+        <li>About</li>
+        <li>Career</li>
+        <li>Help</li>
+        <li>More</li>
+      </ol>
+    </nav>
+    <main>
+      <section id="s1">
+        <img src="s1img.jpg" alt="error" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+          nesciunt delectus dolore dolorum beatae quos fugit vero earum
+          consequuntur. Quaerat possimus corporis enim cupiditate sequi modi
+          quibusdam quia! Odit, odio. Asperiores rem minima nisi repudiandae ea
+          perspiciatis, corporis beatae ratione ad possimus eaque velit labore
+          placeat quod temporibus ex tempore. Unde, explicabo atque molestias
+          ratione temporibus qui molestiae tenetur doloribus. Harum culpa
+          aliquam libero doloribus excepturi amet quis doloremque rem dicta
+          adipisci. Recusandae aliquam in quis, quidem doloremque quam fuga
+          reiciendis obcaecati numquam! Unde incidunt ipsum rerum, adipisci
+          ullam distinctio. Quod dolor et nesciunt iste eum? Quae pariatur
+        </p>
+      </section>
+      <aside><h1>Aside</h1></aside>
+      <article>
+        <div class="card1">
+          <img src="s1img.jpg" alt="error" />
+          <h3>Title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            rem ea perspiciatis nobis distinctio harum id, ex quibusdam,
+            voluptatem vero, ipsum error velit perferendis ab esse consectetur
+            impedit dicta voluptas.
+          </p>
+          <button>More</button>
+        </div>
+        <div class="card1">
+          <img src="s1img.jpg" alt="error" />
+          <h3>Title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            rem ea perspiciatis nobis distinctio harum id, ex quibusdam,
+            voluptatem vero, ipsum error velit perferendis ab esse consectetur
+            impedit dicta voluptas.
+          </p>
+          <button>More</button>
+        </div>
+        <div class="card1">
+          <img src="s1img.jpg" alt="error" />
+          <h3>Title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            rem ea perspiciatis nobis distinctio harum id, ex quibusdam,
+            voluptatem vero, ipsum error velit perferendis ab esse consectetur
+            impedit dicta voluptas.
+          </p>
+          <button>More</button>
+        </div>
+      </article>
+      <section id="s2"><h1>section2</h1></section>
+    </main>
+
+    <footer><h1>Footer</h1></footer>
+  </body>
+</html>

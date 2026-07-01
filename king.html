@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Semantic Tags</title>
+    <style>
+      header,
+      nav,
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header {
+        margin: 10px;
+        height: 300px;
+        background-color: aqua;
+        color: black;
+      }
+
+      nav {
+        margin: 10px;
+        height: 100px;
+        background-color: blue;
+        color: black;
+      }
+
+      main {
+        display: grid;
+        height: 500px;
+        margin: 10px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      section {
+        color: white;
+        background-color: rgb(70, 221, 70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+      }
+
+      article {
+        color: white;
+        background-color: rgb(199, 154, 71);
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        font-size: 25px;
+      }
+
+      aside {
+        color: white;
+        background-color: rgb(179, 38, 167);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        grid-row: span 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome user</h1>
+    </header>
+    <nav>
+      <h1>Navigation</h1>
+    </nav>
+    <main>
+      <section>
+        <h1>Section</h1>
+      </section>
+      <aside>
+        <h1>Aside</h1>
+      </aside>
+      <article>
+        <h1>Article</h1>
+      </article>
+    </main>
+    <footer></footer>
+  </body>
+</html>
