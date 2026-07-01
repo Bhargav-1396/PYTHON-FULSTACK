@@ -1,0 +1,16 @@
+div.section1 {
+  background-color: gray;
+  color: black;
+}
+div.section2 {
+  background-color: green;
+  color: aqua;
+}
+.section1 h1 {
+  color: aquamarine;
+  background-color: aliceblue;
+}
+.section2 h1 {
+  color: blueviolet;
+  background-color: antiquewhite;
+}

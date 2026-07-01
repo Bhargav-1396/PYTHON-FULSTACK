@@ -1,0 +1,16 @@
+* {
+  color: violet;
+}
+h1 {
+  color: blue;
+  text-decoration: underline;
+}
+h1#s {
+  color: brown;
+}
+h1#e {
+  color: chocolate;
+}
+u {
+  color: red;
+}

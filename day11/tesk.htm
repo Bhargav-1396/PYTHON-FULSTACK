@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .parent {
+        border: 5px solid black;
+        width: 800px;
+        height: 100px;
+        display: flex;
+        gap: 5px;
+      }
+      .parent > div {
+        flex: 0 1 auto;
+        color: black;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">one</div>
+      <div class="child2">two</div>
+      <div class="child3">three</div>
+    </div>
+  </body>
+</html>
