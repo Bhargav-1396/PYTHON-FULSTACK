@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bhargav</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 95%;
+        height: 150px;
+        background-color: palevioletred;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 10px;
+      }
+      .parent > div {
+        background-color: blueviolet;
+      }
+      @media (max-width: 500px) {
+        .parent {
+          height: 300px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 300px) {
+        .parent {
+          display: grid;
+          grid-template-rows: 1fr;
+
+          height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1"></div>
+      <div class="child2"></div>
+      <div class="child3"></div>
+      <div class="child4"></div>
+    </div>
+  </body>
+</html>
