@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Medical Management System</title>
+    <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:red;
+}
+
+header{
+    background:blue;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#023e8a;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.container{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#0077b6;
+}
+
+label{
+    display:block;
+    margin-top:10px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:greenyellow;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:aqua;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid black;
+}
+
+th{
+    background:blue;
+    color:white;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    background: yellow;
+    color: white;
+    text-align: center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Medical Management System</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Patients</a>
+    <a href="#">Doctors</a>
+    <a href="#">Appointments</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Patient Registration</h2>
+
+        <form>
+            <label>Patient Name</label>
+            <input type="text" placeholder="Enter Name">
+
+            <label>Age</label>
+            <input type="number" placeholder="Enter Age">
+
+            <label>Gender</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter Phone">
+
+            <label>Disease</label>
+            <input type="text" placeholder="Enter Disease">
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Doctor Information</h2>
+
+        <table>
+            <tr>
+                <th>Doctor</th>
+                <th>Specialist</th>
+            </tr>
+
+            <tr>
+                <td>Dr. John</td>
+                <td>Cardiologist</td>
+            </tr>
+
+            <tr>
+                <td>Dr. Smith</td>
+                <td>Neurologist</td>
+            </tr>
+
+            <tr>
+                <td>Dr. David</td>
+                <td>Orthopedic</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Appointment</h2>
+
+        <form>
+            <label>Patient Name</label>
+            <input type="text">
+
+            <label>Select Doctor</label>
+            <select>
+                <option>Dr. John</option>
+                <option>Dr. Smith</option>
+                <option>Dr. David</option>
+            </select>
+
+            <label>Date</label>
+            <input type="date">
+
+            <button>Book Appointment</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Medical Management System
+</footer>
+
+</body>
+</html>
+
