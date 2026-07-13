@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .show {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="imageId" src="dhoni7.jpg" alt="error" width="200vw" />
+    <button onclick="res()">show/hide</button>
+    <script>
+      abc = document.getElementById("imageId");
+      function res() {
+        abc.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

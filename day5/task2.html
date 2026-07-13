@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link id="hello" rel="stylesheet" href="light.css" />
+  </head>
+  <body>
+    <button onclick="changeThemeDark()">Change Theme to Dark</button>
+    <button onclick="changeThemeLight()">Change Theme to Light</button>
+    <button onclick="changeTheme()">Change Theme</button>
+    <script>
+      let ele = document.getElementById("hello");
+      function changeThemeDark() {
+        ele.setAttribute("href", "dark.css");
+      }
+      function changeThemeLight() {
+        ele.setAttribute("href", "light.css");
+      }
+
+      function changeTheme() {
+        let theme = ele.getAttribute("href");
+        if (theme == "dark.css") {
+          ele.setAttribute("href", "light.css");
+        } else {
+          ele.setAttribute("href", "dark.css");
+        }
+      }
+    </script>
+  </body>
+</html>
