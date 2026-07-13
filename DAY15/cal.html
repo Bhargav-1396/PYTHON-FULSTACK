@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        width: 50vw;
+        height: 50vh;
+      }
+      .display {
+        width: 30vw;
+        height: 10vh;
+        border: 2px solid black;
+        margin-bottom: 3vh;
+      }
+
+      .parent {
+        width: 30vw;
+        height: 70vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1vh;
+      }
+      button {
+        border-radius: 90%;
+        font-size: 5vh;
+        border: none;
+        color: white;
+        background-color: rgb(97, 93, 93);
+      }
+      #a {
+        color: orangered;
+        background-color: rgba(83, 80, 80, 0.648);
+      }
+      #b {
+        background-color: rgba(181, 44, 7, 0.248);
+        color: rgb(231, 76, 20);
+        font-size: 5vh;
+      }
+      #c {
+        background-color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="display">
+      <h1 id="display"></h1>
+    </div>
+    <div class="parent">
+      <button id="a" onclick="ac()">AC</button>
+      <button id="a" onclick="removeLastch()">⌫</button>
+      <button id="a" onclick="enterVal('**')">**</button>
+      <button id="b" onclick="enterVal('/')">/</button>
+      <button onclick="enterVal('7')">7</button>
+      <button onclick="enterVal('8')">8</button>
+      <button onclick="enterVal('9')">9</button>
+      <button id="b" onclick="enterVal('*')">*</button>
+      <button onclick="enterVal('4')">4</button>
+      <button onclick="enterVal('5')">5</button>
+      <button onclick="enterVal('6')">6</button>
+      <button id="b" onclick="enterVal('-')">-</button>
+      <button onclick="enterVal('1')">1</button>
+      <button onclick="enterVal('2')">2</button>
+      <button onclick="enterVal('3')">3</button>
+      <button id="b" onclick="enterVal('+')">+</button>
+      <button onclick="enterVal('%')">%</button>
+      <button onclick="enterVal('0')">0</button>
+      <button onclick="enterVal('.')">.</button>
+      <button id="c" onclick="calc()">=</button>
+    </div>
+    <script>
+      let cal = "";
+      function enterVal(ch) {
+        let output = document.getElementById("display");
+        let updated = output.innerText + ch;
+        output.innerText = updated;
+      }
+      function calc() {
+        let output = document.getElementById("display");
+        let updated = eval(output.innerText);
+        output.innerText = updated;
+      }
+      function ac() {
+        let output = document.getElementById("display");
+        output.innerText = "";
+      }
+      function removeLastch() {
+        let output = document.getElementById("display");
+        let text = output.innerText;
+        let updated = text.slice(0, text.length - 1);
+        output.innerText = updated;
+      }
+    </script>
+  </body>
+</html>
